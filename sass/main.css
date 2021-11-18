@@ -1,0 +1,12 @@
+html {
+  background: url(./bilder/1200x400px-BankingInsurance-LP.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+h1 {
+  color: white;
+}
+/*# sourceMappingURL=main.css.map */

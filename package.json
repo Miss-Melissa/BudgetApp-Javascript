@@ -1,0 +1,17 @@
+{
+  "name": "i2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass sass/main.scss sass/main.css",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
