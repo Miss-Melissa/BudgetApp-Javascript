@@ -5,49 +5,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/all.min.css">
     <title>Budget App</title>
     <script src="./index.js" defer></script>
-    <link rel="stylesheet" href="./sass/main.css">
 </head>
 
 <body>
-
-    <div class="shadow-container">
-        div class="shadow-box"></div>
-    </div>
+    <br>
 
     <h1>Budget App</h1>
 
-    <div class="profit-div">
-        <h3>Saldo:</h3>
-        <div id="profit"></div>
+    <div class="container">
+        <div class="budget-container">
+
+
+            <br>
+
+            <div class="profit-div">
+                <img src="./css/pngwing.com.png" alt="moneykalkyl" width="30" height="30">
+                <div class="profit"></div>
+            </div>
+            <br>
+            <br>
+
+            <form>
+                <div class="option-input-button">
+
+
+                    <select class="option">
+                        <option value="choose" class="choose">Choose</option>
+                        <option value="+" class="plus">+</option>
+                        <option value="-" class="minus">-</option>
+                    </select>
+
+
+                    <input type="text" class="desc" placeholder="Description. . .">
+                    <input type="number" class="value" placeholder="ex. 100. . .">
+
+                    <button class="btn">Enter</button>
+                </div>
+            </form>
+
+            <br>
+            <br>
+
+            <div class="income-expense">
+
+                <section class="incomelist1">
+                    <h2 class="income">Income</h2>
+                    <div id="income-list"></div>
+                </section>
+
+                <section class="expenselist1">
+                    <h2 class="expense">Expense</h2>
+                    <div class="expense-list"></div>
+                </section>
+
+            </div>
+
+        </div>
     </div>
-    <br><br>
-    <form>
-        <select name="" id="">
-            <option value="choose" class="choose">Choose</option>
-            <option value="+" class="plus">+</option>
-            <option value="-" class="minus">-</option>
-        </select>
-
-        <input type="text" id="desc" placeholder="Description. . .">
-        <input type="value" id="value" placeholder="ex. 100. . .">
-
-        <button>Enter</button>
-    </form>
-
-    <div id="income-expense">
-
-        <h1 class="income">Income</h1 <div class="income-list">
-    </div>
-
-
-<h1 class="expenses">Expense</h1>
-    
-<div class="expense-list"></div>
-    
-</div>
-
 
 </body>
 

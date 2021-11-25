@@ -3,15 +3,24 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "scss": "node-sass sass/main.scss sass/main.css",
+    "scss": "node-sass sass/main.scss css/style.css -w",
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "keywords": [],
-  "description": "",
   "dependencies": {
     "node-sass": "^6.0.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Miss-Melissa/inlamning2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Miss-Melissa/inlamning2/issues"
+  },
+  "homepage": "https://github.com/Miss-Melissa/inlamning2#readme",
+  "description": ""
 }

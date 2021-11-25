@@ -1,13 +1,9 @@
-@import "./variabel.scss"
 
-   html {
-        background: url(./bilder/1200x400px-BankingInsurance-LP.jpg); 
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100%;
-      }
-      
-     h1 {
-       color: $textColor;
-     }
+@import './partials/variable.scss';
+@import './partials/breakpoints.scss';
+@import './partials/base.scss';
+@import './partials/list.scss';
+@import './partials/incomeexpenselist.scss';
+@import './partials/profitlist.scss';
+@import './partials/button.scss';
+

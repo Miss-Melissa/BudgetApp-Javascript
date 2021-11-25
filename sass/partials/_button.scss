@@ -1,0 +1,30 @@
+.btn {
+    background-color: $colorG;
+    color: white;
+    font-size: 2rem;
+    padding-left: 2%;
+    padding-right: 2%;
+
+
+    @include responsive(tab-land) {
+    font-size: 1,5rem;
+    } 
+
+        @include responsive(tab-port) {
+            font-size: 1rem;
+            
+            } 
+
+        @include responsive(phone) {
+            font-size: 0,5rem;
+            
+            } 
+ 
+    }
+
+    .btn:hover {
+
+        background-color: rgba(0, 128, 0, 0.418);
+
+    }
+

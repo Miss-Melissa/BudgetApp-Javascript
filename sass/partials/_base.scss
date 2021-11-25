@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+body, html {
+min-height: 100%;
+}
+
+html {
+  background-image: url(./photo-1526304640581-d334cdbbf45e.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+body {
+    font-family: $font-primary;
+    color: $colorG;
+    font-size: 20 px;
+  }
+
+.container {
+    width: 90%;
+    padding-top: 4%;
+    margin: auto; 
+  display: flex;
+  }
+  
+.budget-container {
+    border: 1px solid black;
+    border-radius: 5px;
+    min-height: 80vh;
+    margin: auto;
+    width: 80%;
+    background: white;
+    box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.349);
+ }
+
+ 
