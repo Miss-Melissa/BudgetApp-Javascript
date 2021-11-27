@@ -21,27 +21,32 @@
 
 
             <br>
-
+            <br>
             <div class="profit-div">
-                <img src="./css/pngwing.com.png" alt="moneykalkyl" width="30" height="30">
+                <img src="./css/bilder/pngwing.com.png" alt="moneykalkyl" width="30" height="30">
                 <div class="profit"></div>
             </div>
             <br>
             <br>
-
+            <h2 class="income-container">Income</h2>
+            <div class="income-1"></div>
+            <br>
+            <h2 class="expense-container">Expense</h2>
+            <div class="expense-1"></div>
+            <br>
+            <br>
             <form>
                 <div class="option-input-button">
 
 
-                    <select class="option">
+                    <select class="option" required>
                         <option value="choose" class="choose">Choose</option>
                         <option value="+" class="plus">+</option>
                         <option value="-" class="minus">-</option>
                     </select>
 
-
-                    <input type="text" class="desc" placeholder="Description. . .">
-                    <input type="number" class="value" placeholder="ex. 100. . .">
+                    <input type="text" id="desc" placeholder="Description. . ." required>
+                    <input type="number" id="value" placeholder="ex. 100. . ." required>
 
                     <button class="btn">Enter</button>
                 </div>
@@ -63,6 +68,8 @@
                 </section>
 
             </div>
+
+
 
         </div>
     </div>

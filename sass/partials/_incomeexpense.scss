@@ -1,28 +1,74 @@
-.income-expense{
+@mixin positionCenter {
+    
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    margin: auto;
+}
+
+
+@mixin positionColumn {
+
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+
+@mixin positionSpaceEvenly {
+    
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+
+
+.income-container{
+
+    @include positionCenter;  
+
+}
+
+.income-1 {
+
+@include positionCenter;
+
+}
+
+.expense-container{
+
+@include positionCenter;
+
+}
+
+.expense-1 {
+
+@include positionCenter;
+    
+}
+
+.income-expense{
+
+    @include positionSpaceEvenly;
     text-align: center;
 
     @include responsive(tab-land) {
-       
-        display: flex;
-        justify-content: space-evenly;
+    
+        @include positionSpaceEvenly;
     } 
 
     @include responsive(tab-port) {
 
-        display: flex;
-        justify-content: space-evenly; 
+        @include positionSpaceEvenly;
+
         }
 
     @include responsive(phone) {
 
-        display: flex;
-        flex-direction: column;
-        
-        } 
-}
+        @include positionColumn;
 
+        } 
+    }
 
 .option {
 
@@ -34,93 +80,82 @@
     @include responsive(tab-land) {
         font-size: 1,2rem;
     } 
-
+    
     @include responsive(tab-port) {
         font-size: 0,5rem;
     }
 
     @include responsive(phone) {
         font-size: 0,5rem;
-        
-        } 
-}
-
-
-.desc {
-
-    padding-left: 2%;
-    padding-right: 2%;
-    color: $colorG;
-    font-size: 1,2rem;
-
-
-
-    @include responsive(tab-land) {
-        font-size: 1,2rem;
     } 
-
-    @include responsive(tab-port) {
-        font-size: 0,5rem;
-    }
-
-    @include responsive(phone) {
-        font-size: 0,5rem;
-        
-        } 
-
 }
-
-
-.value {
-
-    padding-left: 2%;
-    padding-right: 2%;
-    color: $colorG;
-    font-size: 1,2rem;
-
-
-
-    @include responsive(tab-land) {
-        font-size: 1,2rem;
-    } 
-
-    @include responsive(tab-port) {
-        font-size: 0,5rem;
-    }
-
-    @include responsive(phone) {
-        font-size: 0,5rem;
-        
-        } 
-}
-
 
 .option-input-button {
 
-    display: flex;
-    justify-content:space-evenly;
+    @include positionSpaceEvenly;
+    
+
 
     @include responsive(tab-land) {
        
-        display: flex;
-        justify-content:space-evenly;
+        @include positionSpaceEvenly;
+
     } 
 
 
     @include responsive(tab-port) {
 
-        display: flex;
-        flex-direction: column; 
+        @include positionColumn;
+
         }
 
     @include responsive(phone) {
-
-        display: flex;
-        flex-direction: column;
+        
+        @include positionColumn;
         
         } 
+}
 
+
+#desc {
+
+    padding-left: 2%;
+    padding-right: 2%;
+    color: $colorG;
+    font-size: 1,2rem;
+
+    @include responsive(tab-land) {
+        font-size: 1,2rem;
+    } 
+
+    @include responsive(tab-port) {
+        font-size: 0,5rem;
     }
 
+    @include responsive(phone) {
+        font-size: 0,5rem;
+        
+        } 
+}
 
-    
+
+#value {
+
+    padding-left: 2%;
+    padding-right: 2%;
+    color: $colorG;
+    font-size: 1,2rem;
+
+    @include responsive(tab-land) {
+        font-size: 1,2rem;
+    } 
+
+    @include responsive(tab-port) {
+        font-size: 0,5rem;
+    }
+
+    @include responsive(phone) {
+        font-size: 0,5rem;
+        
+        } 
+}

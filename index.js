@@ -10,27 +10,32 @@ function budgetApp(e) { // knappens funktion
     //console.log("button works")
 
 
-    var text = document.getElementsByClassName('desc').value
-    var in_value= document.getElementsByClassName('value').value
+    var text = document.getElementById('desc').value
+   console.log(text)
+    var in_value= document.getElementById('value').value
+    console.log(in_value)
+    var sel_option = document.getElementsByClassName('option').value    
+    document.getElementsByClassName('income-list').innerHTML="";
+    document.getElementsByClassName('expense-list').innerHTML="";
 
     if(text=="" || in_value==""){
         if(text=="" &&  in_value==""){
-          document.getElementsByClassName('desc').innerHTML="**This field is requred";
-          document.getElementsByClassName('value').innerHTML="**This field is requred";
+          document.getElementById('desc').innerHTML="**This field is requred";
+          document.getElementById('value').innerHTML="**This field is requred";
         }
         else if(text==""){
-          document.getElementsByClassName('desc').innerHTML="**This field is requred";
-          document.getElementsByClassName('value').innerHTML="";
+          document.getElementsById('desc').innerHTML="**This field is requred";
+          document.getElementsById('value').innerHTML="";
         }
         else if(in_value==""){
-          document.getElementsByClassName('desc').innerHTML="";
-          document.getElementsByClassName('value').innerHTML="**This field is requred";
+          document.getElementById('desc').innerHTML="";
+          document.getElementById('value').innerHTML="**This field is requred";
         }
       }
       else{
-        document.getElementsByClassName('desc').innerHTML="";
-        document.getElementsByClassName('value').innerHTML="";
-
+        document.getElementById('desc').innerHTML="";
+        document.getElementById('value').innerHTML="";
+   
     // connecta option knappen 
     const option = document.querySelector("select");
     console.log(option.value)
@@ -40,10 +45,10 @@ function budgetApp(e) { // knappens funktion
     // skapa if statements där du kopplar alla option values till
     if (option.value == "+") {
 
-        const description = document.querySelector(".desc").value;
+        const description = document.querySelector("#desc").value;
         // skapa en varibel för descripton när man väljer + 
         // value lägger man till för att få ut enskilda värdet som använderen skriver
-        const value = document.querySelector(".value").value;
+        const value = document.querySelector("#value").value;
         // skapa en varibel för value när man väljer +
         //console.log(description)
         //console.log(value)
@@ -59,9 +64,9 @@ function budgetApp(e) { // knappens funktion
 
     if (option.value == "-") { // om option är = -
 
-        const description = document.querySelector(".desc").value;
+        const description = document.querySelector("#desc").value;
         // skapa en varibel för descripton när man väljer -
-        const value = document.querySelector(".value").value;
+        const value = document.querySelector("#value").value;
 
         expenseList.push(value)  // Inputvalue pushar ut value från lådan/Arrayen incomeList 
 
@@ -75,9 +80,8 @@ function budgetApp(e) { // knappens funktion
     if (option.value == "choose") { // om option är = choose
         alert("Välj + eller -")
 
-
-
     }
+
 
     //Loopa igenom listorna och lagra totalt inkomst och kostnad
     var incomeSum = 0;
@@ -93,13 +97,19 @@ function budgetApp(e) { // knappens funktion
     for (var i = 0; i < expenseList.length; i++) {
         //console.log(expenseList[i]);
         expenseSum += Number(expenseList[i]);
-
-    
-}
+}  
 
 const divProfit = document.querySelector(".profit");
 divProfit.textContent = incomeSum - expenseSum
 
+const incomeDiv = document.querySelector(".income-1");
+incomeDiv.innerHTML = `+ ${incomeSum}`
+
+const expenseDiv = document.querySelector(".expense-1");
+expenseDiv.innerHTML = `- ${expenseSum}`
+
+
 }
 }
+
 
